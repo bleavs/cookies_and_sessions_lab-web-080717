@@ -1,0 +1,15 @@
+
+
+
+
+<%= form_tag('/products/add', method: :post) %>
+
+<%= text_field :product, :item, id: 'product' %>
+<%= submit_tag 'add to cart' %>
+
+#display of what's in cart
+
+<% session[:cart].each do |item| %>
+<%= item %>
+
+<% end %>
